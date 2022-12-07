@@ -1,15 +1,6 @@
-#
-# This is the server logic of a Shiny web application. You can run the
-# application by clicking 'Run App' above.
-#
-# Find out more about building applications with Shiny here:
-#
-#    http://shiny.rstudio.com/
-#
-
 library(shiny)
 
-# Define server logic required to draw a histogram
+# Server logic for quick analysis on restaurant visitor and reservation data 
 shinyServer(function(input, output) {
   # Input dynamic UI --------------------------------------------------------------
   # 1. Cuisine Selection --------------------------
@@ -188,6 +179,8 @@ shinyServer(function(input, output) {
   output$popular_hr_FRI <- renderPlotly(popular_hr_dow(df = rv_hr_by_dow(), dow = "Friday")) 
   output$popular_hr_SAT <- renderPlotly(popular_hr_dow(df = rv_hr_by_dow(), dow = "Saturday")) 
   output$popular_hr_SUN <- renderPlotly(popular_hr_dow(df = rv_hr_by_dow(), dow = "Sunday")) 
+  
+  
   
 })
 

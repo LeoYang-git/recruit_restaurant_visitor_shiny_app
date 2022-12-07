@@ -3,7 +3,7 @@ library(leaflet)
 library(shinycssloaders)
 
 header <- dashboardHeader(
-  title = "Recruit Restaurant Visits"
+  title = "Restaurant Visits"
 )
 
 body <- dashboardBody(
